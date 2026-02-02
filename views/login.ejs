@@ -13,14 +13,14 @@
                 <p>Login to access your saved links</p>
             </div>
 
-            <form action="#" onsubmit="event.preventDefault(); alert('Logged in successfully (Demo only)!');">
+            <form action="/login" method="POST" class="auth-form">
                 <div class="input-with-icon">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email Address" class="form-control" required>
+                    <input type="email" placeholder="Email Address" class="form-control" name="email" required>
                 </div>
                 <div class="input-with-icon">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" class="form-control" required>
+                    <input type="password" placeholder="Password" class="form-control" name="password" required>
                 </div>
 
 

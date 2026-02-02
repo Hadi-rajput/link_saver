@@ -3,7 +3,7 @@
 
         <main class="container">
             <section class="hero">
-                <h1>A trusted place for your important links, Abdul Hadi</h1>
+                <h1>A trusted place for your important links, <%= name %></h1>
                 <p>The ultimate destination to organize, manage, and discover your web resources in one elegant place.
                 </p>
                 <div class="hero-actions">
@@ -35,44 +35,33 @@
             <h2 style="margin-top: 4rem; text-align: center; font-size: 2rem; font-weight: 700;">Your Recent Links</h2>
             <div class="links-grid">
                 <!-- Sample Links -->
-                <article class="link-card">
-                    <div class="card-header">
-                        <h3>Google Search</h3>
-                        <div class="card-actions">
-                            <button class="card-action-btn edit" title="Edit Link"><i class="fas fa-edit"></i></button>
-                            <button class="card-action-btn delete" title="Delete Link"><i
-                                    class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                    <p class="link-url">https://google.com</p>
-                    <p>The world's most popular search engine for finding information.</p>
-                </article>
+                <% links.forEach(link => { %>
+<article class="link-card">
+    <div class="card-header">
+        <h3><%= link.title %></h3>
+        <div class="card-actions">
+            <button class="card-action-btn edit" title="Edit Link">
+                <i class="fas fa-edit"></i>
+            </button>
+            <button class="card-action-btn delete" title="Delete Link">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
+    </div>
 
-                <article class="link-card">
-                    <div class="card-header">
-                        <h3>MDN Web Docs</h3>
-                        <div class="card-actions">
-                            <button class="card-action-btn edit" title="Edit Link"><i class="fas fa-edit"></i></button>
-                            <button class="card-action-btn delete" title="Delete Link"><i
-                                    class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                    <p class="link-url">https://developer.mozilla.org</p>
-                    <p>Resources for developers, by developers. Documentation for web technologies.</p>
-                </article>
+    <p class="link-url">
+        <a href="<%= link.url %>" target="_blank">
+            <%= link.url %>
+        </a>
+    </p>
 
-                <article class="link-card">
-                    <div class="card-header">
-                        <h3>GitHub</h3>
-                        <div class="card-actions">
-                            <button class="card-action-btn edit" title="Edit Link"><i class="fas fa-edit"></i></button>
-                            <button class="card-action-btn delete" title="Delete Link"><i
-                                    class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                    <p class="link-url">https://github.com</p>
-                    <p>Where the world builds software. Millions of developers and companies.</p>
-                </article>
+    <p><%= link.description %></p>
+</article>
+<% }) %>
+
+
+               
+              
             </div>
 
         </main>
