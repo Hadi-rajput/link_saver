@@ -1,0 +1,80 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <main class="container">
+            <section class="hero">
+                <h1>A trusted place for your important links, Abdul Hadi</h1>
+                <p>The ultimate destination to organize, manage, and discover your web resources in one elegant place.
+                </p>
+                <div class="hero-actions">
+                    <a href="/add-link" class="btn btn-primary">Get Started</a>
+                </div>
+            </section>
+
+            <section class="info-section"
+                style="margin: 4rem 0; padding: 3rem; background: var(--bg-secondary); border-radius: 20px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Organize Everything</h3>
+                        <p>Keep your bookmarks sorted by projects, technologies, or inspiration. Never lose a valuable
+                            link again.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Instant Access</h3>
+                        <p>Our minimal interface ensures you're always just one click away from your most important
+                            tools.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Dark Mode Support</h3>
+                        <p>Perfect for late-night coding sessions or bright morning work. Switch with a single click.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <h2 style="margin-top: 4rem; text-align: center; font-size: 2rem; font-weight: 700;">Your Recent Links</h2>
+            <div class="links-grid">
+                <!-- Sample Links -->
+                <article class="link-card">
+                    <div class="card-header">
+                        <h3>Google Search</h3>
+                        <div class="card-actions">
+                            <button class="card-action-btn edit" title="Edit Link"><i class="fas fa-edit"></i></button>
+                            <button class="card-action-btn delete" title="Delete Link"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <p class="link-url">https://google.com</p>
+                    <p>The world's most popular search engine for finding information.</p>
+                </article>
+
+                <article class="link-card">
+                    <div class="card-header">
+                        <h3>MDN Web Docs</h3>
+                        <div class="card-actions">
+                            <button class="card-action-btn edit" title="Edit Link"><i class="fas fa-edit"></i></button>
+                            <button class="card-action-btn delete" title="Delete Link"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <p class="link-url">https://developer.mozilla.org</p>
+                    <p>Resources for developers, by developers. Documentation for web technologies.</p>
+                </article>
+
+                <article class="link-card">
+                    <div class="card-header">
+                        <h3>GitHub</h3>
+                        <div class="card-actions">
+                            <button class="card-action-btn edit" title="Edit Link"><i class="fas fa-edit"></i></button>
+                            <button class="card-action-btn delete" title="Delete Link"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <p class="link-url">https://github.com</p>
+                    <p>Where the world builds software. Millions of developers and companies.</p>
+                </article>
+            </div>
+
+        </main>
+
+        <%- include('partials/footer') %>

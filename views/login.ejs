@@ -1,0 +1,43 @@
+<%- include('partials/head') %>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-toggle-wrapper">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Login to access your saved links</p>
+            </div>
+
+            <form action="#" onsubmit="event.preventDefault(); alert('Logged in successfully (Demo only)!');">
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" class="form-control" required>
+                </div>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" class="form-control" required>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary auth-btn">
+                    Sign In
+                </button>
+
+                <p style="text-align: center; margin-top: 2.5rem; color: var(--text-secondary); font-size: 1rem;">
+                    Don't have an account? <a href="/signup"
+                        style="color: var(--accent-color); font-weight: 700; transition: var(--transition);">Create
+                        one</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    </body>
+
+    </html>

@@ -1,0 +1,49 @@
+<%- include('partials/head') %>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-toggle-wrapper">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Start organizing your links today</p>
+            </div>
+
+            <form action="/signup" method="post">
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Full Name" class="form-control" name="fullname" required>
+                </div>
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" class="form-control" name="email" required>
+                </div>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" class="form-control" name="password" required>
+                </div>
+                <div class="input-with-icon">
+                    <i class="fas fa-shield-alt"></i>
+                    <input type="password" placeholder="Confirm Password" name="confirmpassword" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-btn signup-btn">
+                    Sign Up
+                </button>
+
+                <p style="text-align: center; margin-top: 2.5rem; color: var(--text-secondary); font-size: 1rem;">
+                    Already have an account? <a href="/login"
+                        style="color: var(--accent-color); font-weight: 700; transition: var(--transition);">Login</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    </body>
+
+    </html>

@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <div class="container navbar-container">
+        <div class="nav-left">
+            <a href="/" class="logo">LinkSaver</a>
+
+            <form class="search-bar" action="#" onsubmit="event.preventDefault();">
+                <input type="text" placeholder="Search your links..." class="search-input">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="nav-right">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/add-link" class="nav-link">Add Link</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/signup" class="nav-link">Logout</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
